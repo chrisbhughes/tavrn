@@ -33,7 +33,7 @@ class ChatUIContainer extends Component {
       chatsShown: false,
       socket: null,
       composedMessage: "",
-      currentChannel: "Public-Main",
+      currentChannel: "Tavrn",
       conversations: [],
       channelConversations: [],
       guestSignup: "",
@@ -127,7 +127,7 @@ class ChatUIContainer extends Component {
         id: tokenUser._id,
         token,
         usersChannels,
-        currentChannel: currentChannel || "Public-Main",
+        currentChannel: currentChannel || "Tavrn",
         formsMethod:"",
         formsShown: false
       });
@@ -216,7 +216,7 @@ class ChatUIContainer extends Component {
       usersChannels: [],
       socketConversations: [],
       guestSignup: "",      
-      currentChannel: "Public-Main",
+      currentChannel: "Tavrn",
       formsMethod: "login",
       formsShown: true
     });
@@ -420,7 +420,7 @@ class ChatUIContainer extends Component {
 
       cookies.set('usersChannels', updatedChannels, { path: "/", maxAge: 7200 });
       
-      this.joinChannel("Public-Main");
+      this.joinChannel("Tavrn");
       this.setState({
         socketConversations: [],        
         usersChannels: updatedChannels

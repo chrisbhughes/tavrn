@@ -6,7 +6,7 @@ exports = module.exports = function(io) {
     socket.on('enter channel', (channel, username) => {
       if (username) {
         socket.join(channel);
-        io.sockets.in(channel).emit('user joined', `${username} has joined the channel`)
+        io.sockets.in(channel).emit('user joined', `Welcome traveler ${username}`)
         console.log('user has joined channel' , channel, username)
       } else {
         return false
@@ -15,7 +15,7 @@ exports = module.exports = function(io) {
 
     socket.on('leave channel', (channel, username) => {
       socket.leave(channel);
-      io.sockets.in(channel).emit('user left', `${username} has left the channel`);
+      io.sockets.in(channel).emit('user left', `${username} has left the tavern`);
       console.log('user has left channel', channel, username)
     });
     

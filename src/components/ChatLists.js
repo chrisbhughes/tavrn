@@ -34,7 +34,7 @@ export default class ChatLists extends Component {
                             {channel}
                           </p>
                           {
-                            (channel !== "Public-Main")
+                            (channel !== "Tavrn")
                               ? <button onClick={() => {removeChannel(channel)}}>&#xf014;</button>
                               : null
                           }

@@ -17,6 +17,7 @@ const ChatSelector = (props) => {
           (loginError.length)
             ? <Alert 
                 header="Login Error"
+                
                 content={loginError[loginError.length - 1].response.data.error}
               />
             :null

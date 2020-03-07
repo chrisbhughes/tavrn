@@ -12,6 +12,12 @@ html, body {
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
 }
+body{
+  background-image: url(bk.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 button {
   padding: 0;
@@ -33,11 +39,13 @@ button {
 .app--container--btn {
   text-align: center;
 }
-
+.app--container--btn button:hover {
+  transform: scale(1.05);
+}
 .app--container--btn button {
   display: block;
   margin: 0 auto;
-  background-color: #3ebfac;
+  background-color: black;
   border: none;
   outline: none;
   padding: 1rem;
@@ -49,38 +57,53 @@ button {
 }
 
 .chatapp__container {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 13px 16px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   border-radius: 18px;
   display: flex;
   flex-direction: column;
   margin: 2rem;
   min-height: 80vh;
-  height: 100%;
+  height: 80%;
   position: relative;
+  width:50%;
+  margin:auto;
+  margin-top:5%;
+  border: 8px solid rgb(197, 189, 189);
 }
-
+.chatapp__container:after{
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 18px;
+  border: 5px solid rgb(197, 189, 189);
+}
 .chatapp__navigation--container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: #3ebfac; */
-  background-color: #50586b;
-  border-bottom: 6px solid #3ebfac;
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
   height: 5rem;
   color: #fff;
   font-size: 1rem;
   letter-spacing: 1.5px;
   font-weight: 300;
   padding-left: 1.5rem;
+  background-color: gray;
   padding-right: 1.5rem;
   align-items: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 96.6%;
+  margin: auto;
+  margin-top: 2.01%;
 }
 
 .chatapp__navigation--logo:hover {
   cursor: pointer;
-  color: #3ebfac;
+  color: black;
 }
 
 .chatapp__navigation--user {
@@ -95,7 +118,7 @@ button {
 }
 
 .chatapp__navigation--user button {
-  background-color: #3ebfac;
+background-color: black;
   border: none;
   border-radius: 2px;
   height: 2rem;
@@ -105,14 +128,16 @@ button {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-
+.chatapp__navigation--user button:hover{
+transform: scale(1.03);
+}
 .chatapp__navigation--user button:nth-of-type(1) {
   background-color: inherit;
-  border: 1px solid #3ebfac;
+ 
 }
 
 .chatapp__navigation--user button:nth-of-type(1):hover {
-  background-color: #3ebfac;
+  background-color: black;
 }
 
 .chatapp__navigation--user button:nth-of-type(2) {
@@ -120,12 +145,15 @@ button {
 }
 
 .chatapp__form--container {
-  background: linear-gradient(135deg, rgba(36,46,77, 0.9), rgba(137,126,121,0.9));
+  background-color: white;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  border-bottom-left-radius: 18px;
-  border-bottom-right-radius: 18px;
   height: calc(100% - 4.5rem);
+  margin: auto;
+  width: 96.6%;
+  margin-bottom: 2%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .chatapp__form--modal form {
@@ -158,7 +186,7 @@ button {
   width: 28.5rem;
   padding: 3rem;
   height: auto;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.5);
 }
 
 .chatapp__form--modal:before {
@@ -168,19 +196,23 @@ button {
   left: 0;
   height: 2.5px;
   width: 100%;
-  background: linear-gradient(to right, #35c3c1, #3ebfac)
+ 
 }
 
 .chatapp__form--modal button {
-  background-color: #3ebfac;
+background-color: black;
   border: 0;
   outline: 0;
   color: #fff;
   padding: 1rem;
 }
+.chatapp__form--modal button:hover {
+ transform: scale(1.02);
+}
 
 .chatapp__form--guest {
   position: absolute;
+  box-shadow: 0 13px 16px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -199,7 +231,7 @@ button {
   left: 0;
   height: 4px;
   width: 100%;
-  background: linear-gradient(to right, #35c3c1, #3ebfac)
+
 }
 
 .chatapp__form--guest input {
@@ -222,7 +254,7 @@ button {
 }
 
 .chatapp__form--guest button {
-  background-color: #3ebfac;
+  background-color: black;
   border: 0;
   outline: 0;
   color: #fff;
@@ -230,7 +262,7 @@ button {
 }
 
 .alert {
-  color: #3ebfac;
+  color: black;
   position: relative;
 }
 
@@ -245,6 +277,8 @@ button {
   flex-direction: column;
   flex-grow: 1;
   min-width: 265px;
+  background-color: whitesmoke;
+  border-bottom-left-radius: 10px;
 }
 
 .chatapp__userpanel--container button {
@@ -253,11 +287,16 @@ button {
   background-color: inherit;
   color: #3ebfac;
 }
-
+.userpanel__channels--container{
+  float: left;
+  min-height: 15px;
+  width: 260px;
+}
 .userpanel__channels--container p {
   text-align: left;
   padding-left: 1.5rem;
   margin: 0;
+
 }
 
 .userpanel__channels--add {
@@ -268,7 +307,6 @@ button {
   padding-right: 1.5rem;
   align-items: center;
   padding-bottom: 1rem;
-  height: 100%;
   min-height: 7rem;
   border-bottom: 1px solid #f0f0f0;
 }
@@ -276,7 +314,7 @@ button {
 .userpanel__channels--add .add__btn,
 .userpanel__channels--add .close__btn {
   font-family: FontAwesome, 'Open Sans', sans-serif;
-  color: #3ebfac;
+  color: black;
 }
 
 .userpanel__channels--add .close__btn {
@@ -339,21 +377,25 @@ button {
 }
 
 .chatapp__mainchat--container {
-  display: flex;
-  height: 100%;
+  display:flex;
+  height: 80%;
   flex-grow: 1;
+  width: 96.6%;
+  margin: auto;
+  margin-bottom: 2%;
 }
 
 .chatapp__chatbox {
   background-color: #fff;
   width: 100%;
-  border-left: 1px solid #eee;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   height: 100%;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: stretch;  
-  border-bottom-right-radius: 18px;
+
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14),
   0 1px 5px 0 rgba(0, 0, 0, .12),
   0 3px 1px -2px rgba(0, 0, 0, .2);
@@ -366,7 +408,7 @@ button {
   margin-bottom: 0;
   height: 3.5rem;
   line-height: 3.5rem;
-  border-bottom:2px solid #a77fb2;
+  border-bottom:2px solid black;
 }
 
 .chatapp__chatbox form {
@@ -422,10 +464,13 @@ button {
 }
 
 .chatapp__chatbox--messages .chat--received .speech--bubble {
-  border-left: 2.25px solid #a77fb2;
-  border-right: 0;
+	position: relative;
+	border-radius: .4em;
 }
-
+.chatapp__chatbox--messages .chat--received .speech--bubble:after {
+	position: relative;
+	border-radius: .4em;
+}
 .chatapp__chatbox--messages .user--joined {
   align-self: center;
   padding-bottom: 1.5rem;
@@ -448,7 +493,6 @@ button {
   display: inline-block;
   min-width: 3rem;
   color: #000;
-  border-right: 2.25px solid #3ebfac;
   margin-bottom: 1rem;
 }
 
@@ -456,6 +500,7 @@ button {
   margin: 0;
   padding: 0.875rem;
 }
+
 
 .speech--bubble--author p {
   display: inline-block;
@@ -493,8 +538,9 @@ button {
 
 .private__message--window {
   position: absolute;
-  height: 85%;
-  width: 75vw;
+  height: 97%;
+  /* width: 75vw; */
+  width: 96.6%;
   /* max-height: 20rem; */
   background-color: #fff;
   top: 50%;
@@ -509,7 +555,7 @@ button {
   left: 0;
   height: 4px;
   width: 100%;
-  background: linear-gradient(to right, #35c3c1, #3ebfac)
+ 
 }
 
 #private__message--input {

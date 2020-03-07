@@ -17,7 +17,7 @@ const UserSchema = new Schema({
   },
   usersChannels: {
     type: Array,
-    default: ['Public-Main']
+    default: ['Tavrn']
   }
 },
 {
