@@ -13,15 +13,7 @@ const ChatSelector = (props) => {
           <input onChange={handleChange} type="text" name="guestSignup" placeholder="Enter a Guest Name" label="Enter a Guest Name"/>
           <button>Enter</button>
         </form>
-        {
-          (loginError.length)
-            ? <Alert 
-                header="Login Error"
-                
-                content={loginError[loginError.length - 1].response.data.error}
-              />
-            :null
-        }
+
       </div>
     </div>
   )
