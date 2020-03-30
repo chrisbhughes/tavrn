@@ -10,6 +10,8 @@ export default class RegisterForm extends Component {
       username: "",
       password: "",
     }
+    if (this.state.username === '') { return null }
+    if (this.state.password === '') { return null }
   }
 
   handleChange = (event) => {
